@@ -1,0 +1,107 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background:linear-gradient(to right, #c0d5ff, #c9d6ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 125vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+
+.form-group{
+    margin: 15px;
+}
+button{
+    font-weight: bolder;
+    padding: 15px 30px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-right: 10px;
+    font-size: 15px;
+}
+input{
+    border:none;
+    outline: none;
+    background: transparent;
+    color: white;
+    border-bottom: 1px solid  rgba(255,255,255,0.6);
+    opacity: .8;
+    margin-left: auto;
+}
+
+form {
+    padding: 10px;
+    display: flex;
+    margin: 10px;
+    border-radius: 30px;
+}
+  
+.register{
+    background-color: white;
+    color: rgb(134, 115, 115);
+    padding: 40px;
+    width:50%;
+}
+.Personal{
+    background-color:  #4a49e2;
+    color: white;
+    padding: 40px;
+    width:50%; 
+}
+.h1{
+    color: #1888f8;
+    margin-bottom: 20px;
+    text-align: left;
+    margin-left: 12px;
+  
+}
+.input2{
+    border:none;
+    outline: none;
+    background: transparent;
+    color: rgb(0, 0, 0);
+    border-bottom: 1px solid  rgba(138, 121, 121, 0.6);
+    opacity: .8;
+}
+.h2{
+    margin-top: 12px;
+    text-align: left;
+    margin-bottom: 20px;
+    margin-left: 12px; 
+}
+button:hover {
+    background: #9891ff;
+}
+a{
+    color: white;
+}
+h1,h2{
+    font-weight: lighter;
+    font-size: 24px;
+    
+}
+#int{
+    width: 100%;
+    margin-bottom: 5px;
+}
+.error {
+    color: red;
+    font-size: 12px;
+}
+
+.success {
+    color: green;
+    font-size: 12px;
+}
+#firstname,#middlename,#lastname,#DOB,#email,#password,#confirmpassword,#phone,#state,#city,#age{
+    width: 100%;
+    margin-bottom: 5px;
+}

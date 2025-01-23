@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script> <!-- Defer loading of script for better performance -->
+</head>
+<body>
+    <center>
+        <div class="full-form">
+            <form id="form" class="form">
+                <table>
+                    <tr>
+                        <td class="register">
+                            <h2 class="h1">General Information</h2>
+                            <div class="form-group">
+                                <label for="firstname">Firstname *</label><br>
+                                <input class="input2" type="text" id="firstname" minlength="5" maxlength="8" required pattern="[A-Za-z]{8}">
+                                <span class="error"></span>
+                            </div><br>
+                            <div class="form-group">
+                                <label for="middlename">Middlename</label><br>
+                                <input class="input2" type="text" id="middlename" minlength="5" maxlength="8" required pattern="[A-Za-z]{8}">
+                                <span class="error"></span>
+                            </div><br>
+                            <div class="form-group">
+                                <label for="lastname">Lastname *</label><br>
+                                <input class="input2" type="text" id="lastname" minlength="5" maxlength="8" required pattern="[A-Za-z]{8}">
+                                <span class="error"></span>
+                            </div><br>
+                            <div class="form-group">
+                                <label for="DOB">DOB *</label><br>
+                                <input class="input2" type="date" min="1989-01-01" max="2006-12-30" id="DOB" required>
+                                <span class="error"></span>
+                            </div><br>
+                            <div class="form-group">
+                                <label for="age">Age *</label><br>
+                                <input class="input2" type="number" id="age" name="age" min="18" max="35" required>
+                                <span class="error"></span>
+                            </div><br>
+                            <div class="form-group">
+                                <label for="GENDER">Gender</label><br>
+                                <input type="radio" name="GENDER" id="male" value="MALE" required><label for="male">Male</label>
+                                <input type="radio" name="GENDER" id="female" value="FEMALE" required><label for="female">Female</label>
+                                <input type="radio" name="GENDER" id="others" value="OTHERS" required><label for="others">Others</label>
+                                <span class="error"></span>
+                            </div><br>
+                            <div class="list" id="checkboxForm">
+                                <label for="COURSE">Course *</label><br>
+                                <input type="checkbox" id="SSLC" name="COURSE"><label for="SSLC">SSLC</label>
+                                <input type="checkbox" id="HSC" name="COURSE"><label for="HSC">HSC</label>
+                                <input type="checkbox" id="UG" name="COURSE"><label for="UG">UG</label>
+                                <input type="checkbox" id="PG" name="COURSE"><label for="PG">PG</label>
+                                <input type="checkbox" id="DIPLOMA" name="COURSE"><label for="DIPLOMA">DIPLOMA</label>
+                                <span class="error"></span>
+                            </div><br><br>
+                            <label id="messagelabel"></label>
+                        </td>
+                        <td class="Personal">
+                            <h2 class="h2">Contact Details</h2>
+                            <div class="form-group">
+                                <label for="email">Email *</label><br>
+                                <input id="email"  type="email" required>
+                                <span class="error"></span>
+                            </div><br>
+                            <div class="form-group">
+                                <label for="password">Password *</label><br>
+                                <input type="password" id="password" name="password" minlength="8" required>
+                                <span class="error"></span>
+                            </div><br>
+                            <div class="form-group">
+                                <label for="confirmpassword">Confirm Password *</label><br>
+                                <input type="password" id="confirmpassword" name="confirmpassword" minlength="8" required>
+                                <p id="message"></p>
+                                <span class="error"></span>
+                            </div><br>
+                            <div class="form-group">
+                                <label for="phone">Contact number *</label><br>
+                                <input type="text" id="phone" pattern="[6-9]{1}[0-9]{9}" inputmode="numeric" maxlength="10" required>
+                                <span class="error"></span>
+                            </div><br>
+                            <div class="form-group">
+                                <label>Select Your State *</label><br>
+                                <input id="state" list="statelist" name="state" required>
+                                <datalist id="statelist">
+                                    <option value="Tamilnadu">
+                                    <option value="Bengaluru">
+                                    <option value="Mumbai">
+                                    <option value="Hyderabad">
+                                    <option value="Delhi">
+                                </datalist>
+                                <span class="error"></span>
+                            </div><br>
+                            <div class="form-group">
+                                <label>Select Your City *</label><br>
+                                <input id="city" list="citylist" name="city" required>
+                                <datalist id="citylist">
+                                    <option value="Thiruvarur">
+                                    <option value="Chennai">
+                                    <option value="Madurai">
+                                    <option value="Trichy">
+                                    <option value="Coimbatore">
+                                </datalist>
+                                <span class="error"></span>
+                            </div><br><br>
+                            <input type="checkbox" id="terms" name="terms"><label for="terms">I agree to the <a href="#">terms and conditions</a></label><br><br>
+                            <button type="submit" onclick= "validateOutput()">Submit</button>
+                            <button type="reset">Clear</button>
+                        </td>
+                    </tr>
+                </table><br><br>
+            </form>
+        </div>
+    </center>
+</body>
+</html>
